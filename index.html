@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard รายงานผลการดำเนินงาน ศูนย์ส่งเสริมและพัฒนานักศึกษา ม.วลัยลักษณ์</title>
+    
+    <style>
+        /* รีเซ็ตค่าระยะขอบและล็อกไม่ให้หน้าเว็บหลักมี Scrollbar */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; 
+            background-color: #f4f7f6;
+        }
+        
+        /* ตั้งค่า iframe ให้แสดงผลเต็ม 100% ของหน้าจอ */
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+
+        /* หน้าจอโหลดระหว่างรอ Google Apps Script ตอบกลับ */
+        .loading-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f7f6;
+            z-index: -1; /* ให้อยู่ด้านหลัง iframe */
+            font-family: 'Kanit', sans-serif;
+            color: #1A365D;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="loading-overlay">
+        <h2>กำลังเตรียมหน้าจอ Dashboard...</h2>
+    </div>
+
+    <iframe src="https://script.google.com/macros/s/AKfycbzI4MwGzQFtKTsMqQ_4rcrH6iWy9haQTZyZcSBbNg5nty4bnnzoEj5kdj7Fhy2J8rIz/exec" allowfullscreen></iframe>
+
+</body>
+</html>
